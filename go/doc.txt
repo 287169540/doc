@@ -1,0 +1,17 @@
+// get post
+Form：存储了post、put和get参数，在使用之前需要调用ParseForm方法。
+PostForm：存储了post、put参数，在使用之前需要调用ParseForm方法。
+MultipartForm：存储了包含了文件上传的表单的post参数，在使用前需要调用ParseMultipartForm方法。
+
+
+// fmt timestamp
+date := time.Now().Format("2006-01-02 15:04:05")
+
+
+// short code
+var data struct{
+	Address string `json="address"`
+	Port string `json="port"`
+	Password string `json=password`
+}
+json.Unmarshal(rs, &data)
